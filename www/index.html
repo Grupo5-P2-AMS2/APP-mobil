@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" href="css/index.css">
-        
-        <title>Hello World</title>
-    </head>
-    <body>
+<head>
+    <meta charset="utf -8">
+    <title>VRSchool7</title> 
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<nav>
+  <div class="nav-wrapper">
+    <img src="img/logo.png"/>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a>Contacta'ns</a></li>
+      <li><a>Encara no t'has Has Iniciat Sessió</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="sass.html">Contacta'ns</a></li>
+  <li><a href="badges.html">Encara no t'has Has Iniciat Sessió</a></li>
+</ul>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
         <div class="login-page">
-            <div class="form">
-                <form class="login-form">
-                    <img src="data:image/jpeg;base64,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"
-                    width="100" height="100"/>
-                    <input type="classRoom" id="URL" placeholder="URL ClassVRRoom" value="https://classvrroom.herokuapp.com"/>
-                    <input type="user" id="user" placeholder="Usuari"/>
-                    <input type="password" id="pass" placeholder="Contrasenya"/>
-                    <button id="loginButton">login</button>
-                 </form>
-            </div>
+          <div class="form">
+            <form class="login-form">
+                <img src="img/logo.png"
+                width="200" height="141"/>
+                <input type="classRoom" id="URL" placeholder="URL ClassVRRoom" value="http://classroomvr.herokuapp.com"/>
+                <input type="user" id="user" placeholder="Usuari" value="student@gmail.com"/>
+                <input type="password" id="pass" placeholder="Contrasenya" value="!1234asdf"/>
+                <button id="loginButton" type="submit" name="action">Login</button>
+                <button id="registerButton" type="submit" name="action">Register</button>
+                <label>
+                  <input type="checkbox" />
+                  <span>Recorda el meu Usuari</span>
+                </label>
+              </form>
+          </div>
         </div>
-        <script src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
-        <script type="text/javascript" id="jqm-trans-disable">
-            /* For having a faster transition */
-            $(document).on("mobileinit", function() {
-                    $.mobile.defaultPageTransition = "none";
-                    $.mobile.defaultDialogTransition = "none";
-        });
-        </script>
-        <script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script src="cordova.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/index.js"></script>
 </html>
+

@@ -1,21 +1,34 @@
 document.addEventListener('deviceready', onDeviceReady, false);
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+});
 function onDeviceReady() {
-    $('#loginButton').click(function(){
-        $.ajax({
-            method: "GET",
+    $("#loginButton").on("click", function(){
+        user=$('#user').val();
+        pass=$('#pass').val();
+        console.log({email:user,password:pass})
+        $.ajax({    
+            method: "POST",
             url: $('#URL').val()+"/api/login",
-            data : {"username" : $('#user').val(),"password" :  $('#pass').val()},
+            data : JSON.stringify({email:user,password:pass}),
             dataType: "json",
+            contentType: "application/json",
         }).done(function (info) {
             if (info["status"] == "OK"){
                 localStorage.setItem("URL", $('#URL').val())
                 localStorage.setItem("session_token", info["session_token"]);
-                window.location.assign('test.html');
+                localStorage.setItem("user", $('#user').val())
+                window.location.assign('muestraDatos.html');
             } else if (info["status"] != "OK"){
-                alert(info["message"])
+                console.log(info)
+                alert(info["message"] + "turmuertos")
             }
         }).fail(function () {
             alert("URL incorrecta, por favor introduzca una url valida.");
         });
+        return false;
     });
+    $(".button-collapse").sideNav();
+    $('.sidenav').sidenav();
 }

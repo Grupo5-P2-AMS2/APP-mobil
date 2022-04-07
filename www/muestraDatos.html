@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf -8">
+        <meta name="format-detection" content="telephone=no">
+        <title>VRSchool7 Api datos</title>
+        <meta http-equiv="Content-Security-Policy" content="default-src https://code.jquery.com https://fonts.gstatic.com 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' data: http://classroomvr.herokuapp.com; style-src https://fonts.googleapis.com 'self' 'unsafe-inline'; media-src *; img-src 'self' * data: content:;">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+
+    <nav>
+        <div class="nav-wrapper">
+            <img src="img/logo.png"/>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+            <li><a>Contacta'ns</a></li>
+            <li><a id="user">Encara no t'has Has Iniciat Sessió</a></li>
+            </ul>
+        </div>
+        </nav>
+        
+        <ul class="sidenav" id="mobile-demo">
+        <li><a>Contacta'ns</a></li>
+        <li><a id="user2">Encara no t'has Has Iniciat Sessió</a></li>
+        </ul>
+
+    <body>
+        <ul id="tabs-swipe-demo" class="tabs">
+            <li class="tab col s3"><a class="active" href="#test-swipe-1">Cursos</a></li>
+            <li class="tab col s3"><a href="#test-swipe-2">Elements i Tasques</a></li>
+        </ul>
+          <!--Page 1-->
+        <div id = "test-swipe-1">
+            <div class="row">
+                <div class="col s12">
+                    <div class="login-page">
+                        <div class="form-listac">
+                                <div id="lista_cursos">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="test-swipe-2"></div>
+    </body>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Pin</h4>
+          <p id="pin">El teu pin no s'ha carregat correctament</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+    
+    <script src="cordova.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/muestraDatos.js"></script>
+</html>
